@@ -1,0 +1,9 @@
+{
+  "name": "matryoshka-select-overview",
+  "description": "\"Select-field-data-from-a-list-or-grid-overview\" support for Matryoshka.",
+  "homepage": "https://github.com/krstffr/meteor-matryoshka-select-overview",
+  "author": "Kristoffer Klintberg <krstffr@gmail.com>",
+  "version": "0.0.1",
+  "git": "https://github.com/krstffr/meteor-matryoshka-select-overview.git",
+  "packages": {}
+}

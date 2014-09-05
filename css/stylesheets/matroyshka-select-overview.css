@@ -1,0 +1,79 @@
+/* line 7, ../sass/matroyshka-select-overview.scss */
+.matryoshka__body .matryoshka__customField__selectOverview input[type="text"].matryoshka__customField__selectOverview__locked-input {
+  width: 59%;
+}
+/* line 11, ../sass/matroyshka-select-overview.scss */
+.matryoshka__body .matryoshka__customField__selectOverview button {
+  width: 19%;
+  margin-right: 1%;
+  float: left;
+}
+/* line 17, ../sass/matroyshka-select-overview.scss */
+.matryoshka__body .matryoshka__customField__selectOverview__popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #FFF;
+  margin: 3%;
+  width: 94%;
+  height: 85%;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 0.4em;
+  border-radius: 0.4em;
+  border-radius: 0.4em;
+}
+/* line 30, ../sass/matroyshka-select-overview.scss */
+.matryoshka__body .matryoshka__customField__selectOverview__list {
+  overflow: auto;
+  height: 100%;
+  padding-bottom: 3em;
+}
+/* line 35, ../sass/matroyshka-select-overview.scss */
+.matryoshka__body .matryoshka__customField__selectOverview__list__item {
+  cursor: pointer;
+}
+/* line 37, ../sass/matroyshka-select-overview.scss */
+.matryoshka__body .matryoshka__customField__selectOverview__list__item:hover {
+  background: #eee;
+}
+/* line 40, ../sass/matroyshka-select-overview.scss */
+.matryoshka__body .matryoshka__customField__selectOverview__list__item__value {
+  display: none;
+}
+/* line 43, ../sass/matroyshka-select-overview.scss */
+.matryoshka__body .matryoshka__customField__selectOverview__list__item img {
+  width: auto;
+  height: auto;
+  max-width: 240px;
+  max-height: 160px;
+  margin: 5px;
+}
+/* line 50, ../sass/matroyshka-select-overview.scss */
+.matryoshka__body .matryoshka__customField__selectOverview__list__item p {
+  padding: 0;
+}
+/* line 58, ../sass/matroyshka-select-overview.scss */
+.matryoshka__body .matryoshka__customField__selectOverview__popup--list .matryoshka__customField__selectOverview__list__item {
+  border-bottom: 1px solid #ddd;
+  padding: 0.4em;
+}
+/* line 64, ../sass/matroyshka-select-overview.scss */
+.matryoshka__body .matryoshka__customField__selectOverview__popup--grid .matryoshka__customField__selectOverview__list {
+  text-align: center;
+}
+/* line 66, ../sass/matroyshka-select-overview.scss */
+.matryoshka__body .matryoshka__customField__selectOverview__popup--grid .matryoshka__customField__selectOverview__list__item {
+  width: 250px;
+  height: 210px;
+  border: 1px solid #ddd;
+  margin: 0 1em 1em 0;
+  overflow: hidden;
+  display: inline-block;
+}
+/* line 76, ../sass/matroyshka-select-overview.scss */
+.matryoshka__body .matryoshka__customField__selectOverview__popup .close-popup,
+.matryoshka__body .matryoshka__customField__selectOverview__popup .close-popup:hover {
+  background: #D55;
+}

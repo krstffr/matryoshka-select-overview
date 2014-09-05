@@ -1,0 +1,18 @@
+<template name="matryoshka__customField__selectOverview">
+
+	<div class="matryoshka__customField__selectOverview">
+
+		<button class="matryoshka__nestable__container__button">
+			Select {{ selectOverviewOptions.buttonName }}
+		</button>
+
+		<input 
+		data-parent-id="{{ ../../matryoshkaId }}"
+		class="matryoshka-save-on-blur matryoshka__customField__selectOverview__locked-input" 
+		type="text" 
+		value="{{ matryoshka__getFieldValue ../.. }}" 
+		disabled="disabled" />
+
+	</div>
+	
+</template>

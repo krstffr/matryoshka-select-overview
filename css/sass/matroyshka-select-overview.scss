@@ -1,0 +1,82 @@
+.matryoshka__body {
+
+	@import "compass";
+		
+	.matryoshka__customField__selectOverview {
+
+		input[type="text"].matryoshka__customField__selectOverview__locked-input {
+			width: 59%;
+		}
+
+		button {
+			width: 19%;
+			margin-right: 1%;
+			float: left;
+		}
+
+		&__popup {
+			position: fixed;
+			top: 0;
+			left: 0;
+			background: #FFF;
+			margin: 3%;
+			width: 94%;
+			height: 85%;
+
+			@include box-shadow( 0 1px 4px rgba(black,0.3),0 5px 10px rgba(black,0.2) );
+			@include border-radius(0.4em);
+		}
+
+		&__list {
+			overflow: auto;
+			height: 100%;
+			padding-bottom: 3em;
+
+			&__item {
+				cursor: pointer;
+				&:hover {
+					background: #eee;
+				}
+				&__value {
+					display: none;
+				}
+				img {
+					width: auto;
+					height: auto;
+					max-width: 240px;
+					max-height: 160px;
+					margin: 5px;
+				}
+				p {
+					padding: 0;
+				}
+			}
+		}
+
+		&__popup {
+			&--list {
+				.matryoshka__customField__selectOverview__list__item {
+					border-bottom: 1px solid #ddd;
+					padding: 0.4em;
+				}
+			}
+			&--grid {
+				.matryoshka__customField__selectOverview__list {
+					text-align: center;
+					&__item {
+						width: 250px;
+						height: 210px;
+						border: 1px solid #ddd;
+						margin: 0 1em 1em 0;
+						overflow: hidden;
+						display: inline-block;
+					}
+				}
+			}
+			.close-popup,
+			.close-popup:hover {
+				background: #D55;
+			}
+		}
+	}
+}

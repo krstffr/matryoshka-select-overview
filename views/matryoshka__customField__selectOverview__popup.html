@@ -1,0 +1,81 @@
+<template name="matryoshka__customField__selectOverview__popup">
+
+	{{#if listData }}
+
+		<div class="
+		matryoshka__customField__selectOverview__popup
+		matryoshka__customField__selectOverview__popup--{{ listViewStyle }}
+		matryoshka__nestable__container
+		">
+
+			<div class="matryoshka__nestable__container__col matryoshka__nestable__container__col--left">
+				<h3>Select</h3>
+
+				<div class="matryoshka__nestableSubPartButtons">
+
+					<button class="
+					matryoshka__nestable__container__button matryoshka__nestable__container__button--absolute 
+					set-list-view-style-to-grid
+					">
+						<i class="fa fa-th"></i>
+					</button>
+
+					<button class="
+					matryoshka__nestable__container__button matryoshka__nestable__container__button--absolute 
+					set-list-view-style-to-list
+					">
+						<i class="fa fa-list"></i>
+					</button>
+
+					<button class="
+					matryoshka__nestable__container__button matryoshka__nestable__container__button--absolute 
+					close-popup
+					">
+						<i class="fa fa-times"></i>
+					</button>
+
+				</div>
+
+				<div class="matryoshka__nestableSubPartButtons matryoshka__nestableSubPartButtons--hidden">
+
+					<button class="matryoshka__nestable__container__button matryoshka__nestable__container__button--transparent matryoshka__nestable__container__button--absolute">
+						<i class="fa fa-plus"></i>
+					</button>
+
+				</div>
+
+			</div>
+
+			<div class="
+			matryoshka__nestable__container__col
+			matryoshka__nestable__container__col--right
+			matryoshka__customField__selectOverview__list
+			">
+
+				{{#each listData }}
+
+				<div class="matryoshka__customField__selectOverview__list__item">
+					
+					{{#if listItemImagePreview }}
+						<img src="{{ listItemImagePreview }}" alt="An image preview of {{ listItemValue }}" />
+					{{/if}}
+
+					<p>
+						{{ listItemValueToDisplay }}
+					</p>
+
+					<div class="matryoshka__customField__selectOverview__list__item__value">
+						{{ listItemValue }}
+					</div>
+
+				</div>
+
+				{{/each}}
+
+			</div>
+
+		</div>
+
+	{{/if}}
+
+</template>
