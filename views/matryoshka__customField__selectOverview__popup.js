@@ -2,10 +2,19 @@
 var tmplName = 'matryoshka__customField__selectOverview__popup';
 
 Template[tmplName].helpers({
+	showListData: function () {
+		return this;
+	},
 	listData: function () {
-		if (!MatryoshkaSelectOverview.popup.options.mapMethod)
-			return this;
-		return _.compact( _.map(this, MatryoshkaSelectOverview.popup.options.mapMethod ) );
+		var toReturn = this;
+		if (MatryoshkaSelectOverview.popup.options.mapMethod)
+			toReturn = _.compact( _.map(this, MatryoshkaSelectOverview.popup.options.mapMethod ) );
+		var keysToFilter = _.compact([
+			MatryoshkaSelectOverview.popup.options.fieldToUse,
+			MatryoshkaSelectOverview.popup.options.fieldToDisplay,
+			MatryoshkaSelectOverview.popup.options.fieldImgPreview
+		]);
+		return Matryoshka.filter.filterCollection( toReturn, keysToFilter );
 	},
 	listViewStyle: function () {
 		return Session.get('listViewStyle');

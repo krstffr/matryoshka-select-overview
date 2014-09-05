@@ -25,10 +25,13 @@ function MatryoshkaSelectOverviewHandler() {
 	that.popup.getData = function () {
 		// Currently only sessions are supported
 		if ( that.popup.options.type === 'session' ) {
+
 			if (!Session.get(that.popup.options.sessionName))
 				return ;
+
 			return Session.get(that.popup.options.sessionName)[ that.popup.options.sessionKey ] ||
 			Session.get(that.popup.options.sessionName);
+
 		}
 	};
 
