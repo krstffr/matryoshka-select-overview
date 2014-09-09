@@ -66,12 +66,13 @@ function MatryoshkaSelectOverviewHandler() {
 		if (!that.bodyOverflowFirstValue)
 			that.bodyOverflowFirstValue = bd.css('overflow');
 		// If we're not force-hiding the overflow or it's currently hidden, reset it.
-		if (!forceHidden || bd.css('overflow') === 'hidden')
-			bd.css({ overflow: that.bodyOverflowFirstValue });
-		// Else hide it and store it's current overflow value for use later.
-		else {
+		if (forceHidden) {
 			that.bodyOverflowFirstValue = bd.css('overflow');
 			bd.css({ overflow: 'hidden' });
+		}
+		// Else hide it and store it's current overflow value for use later.
+		else {
+			bd.css({ overflow: that.bodyOverflowFirstValue });
 		}
 	};
 
