@@ -32,6 +32,9 @@ Template[tmplName].helpers({
 });
 
 Template[tmplName].events({
+	'click .matryoshka__customField__selectOverview__fader': function () {
+		MatryoshkaSelectOverview.popup.deletePopup();
+	},
 	'click .set-list-view-style-to-grid': function () {
 		Session.set('listViewStyle', 'grid');
 	},

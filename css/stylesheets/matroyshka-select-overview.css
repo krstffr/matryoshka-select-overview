@@ -77,3 +77,13 @@
 .matryoshka__body .matryoshka__customField__selectOverview__popup .close-popup:hover {
   background: #D55;
 }
+/* line 82, ../sass/matroyshka-select-overview.scss */
+.matryoshka__body .matryoshka__customField__selectOverview__fader {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}

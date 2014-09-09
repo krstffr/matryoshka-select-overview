@@ -36,28 +36,43 @@ function MatryoshkaSelectOverviewHandler() {
 	};
 
 	that.popup.show = function ( data, input ) {
-		
 		// Remove any current popups
 		if (that.popup.currentPopup)
 			that.popup.deletePopup();
-
 		// The user defined options for this field
 		that.popup.options = data.selectOverviewOptions;
 		// The input to be filled later with the data
 		that.popup.input = input;
 		// This is the data to be used to populate the "popup"
 		var dataToUse = that.popup.getData();
-		// Create the new popup
-		that.popup.currentPopup = UI.renderWithData(Template[that.popup.tmplName], dataToUse);
-		// Insert the new popup to the DOM
-		UI.insert(that.popup.currentPopup, document.body);
+		that.popup.currentPopup = Blaze.renderWithData( Template[that.popup.tmplName], dataToUse, document.body );
+		// The body should not be scrollable!
+		that.toggleBodyOverflow( true );
 	};
 
 	that.popup.deletePopup = function () {
 		if (that.popup.currentPopup)
-			UI.remove(that.popup.currentPopup);
+			Blaze.remove(that.popup.currentPopup);
 		that.popup.currentPopup = false;
 		that.popup.input = false;
+		that.toggleBodyOverflow( false );
+	};
+
+	that.bodyOverflowFirstValue = false;
+
+	that.toggleBodyOverflow = function ( forceHidden ) {
+		var bd = $('body');
+		// First make sure we've stored the initial state of the body overflow value.
+		if (!that.bodyOverflowFirstValue)
+			that.bodyOverflowFirstValue = bd.css('overflow');
+		// If we're not force-hiding the overflow or it's currently hidden, reset it.
+		if (!forceHidden || bd.css('overflow') === 'hidden')
+			bd.css({ overflow: that.bodyOverflowFirstValue });
+		// Else hide it and store it's current overflow value for use later.
+		else {
+			that.bodyOverflowFirstValue = bd.css('overflow');
+			bd.css({ overflow: 'hidden' });
+		}
 	};
 
 	that.init = function () {
