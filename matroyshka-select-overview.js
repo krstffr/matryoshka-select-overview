@@ -56,6 +56,7 @@ function MatryoshkaSelectOverviewHandler() {
 		that.popup.currentPopup = false;
 		that.popup.input = false;
 		that.toggleBodyOverflow( false );
+		Matryoshka.filter.hide();
 	};
 
 	that.bodyOverflowFirstValue = false;
