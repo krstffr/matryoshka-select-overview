@@ -7,8 +7,8 @@ function MatryoshkaSelectOverviewHandler() {
 	that.fieldTypeObject = {
 		name: 'select-overview',
 		templateFileName: 'matryoshka__customField__selectOverview',
-		saveMethod: function () {
-			return Session.get('matryoshkaCurrentNestable');
+		saveMethod: function ( doc ) {
+			return doc;
 		}
 	};
 
