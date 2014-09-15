@@ -6,10 +6,7 @@ function MatryoshkaSelectOverviewHandler() {
 	// Else Matryoshka will think the "pen" type is invalid.
 	that.fieldTypeObject = {
 		name: 'select-overview',
-		templateFileName: 'matryoshka__customField__selectOverview',
-		saveMethod: function ( doc ) {
-			return doc;
-		}
+		templateFileName: 'matryoshka__customField__selectOverview'
 	};
 
 	that.popup = {};
