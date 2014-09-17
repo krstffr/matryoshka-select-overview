@@ -8,10 +8,8 @@ function MatryoshkaSelectOverviewHandler() {
 		name: 'select-overview',
 		templateFileName: 'matryoshka__customField__selectOverview',
 		initMethod: function() {
-			Meteor.startup(function () {
-				Session.setDefault('listViewStyle', 'grid');
-				that.popup.deletePopup();
-			});
+			Session.setDefault('listViewStyle', 'grid');
+			that.popup.deletePopup();
 		}
 	};
 
