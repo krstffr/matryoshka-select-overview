@@ -6,7 +6,13 @@ function MatryoshkaSelectOverviewHandler() {
 	// Else Matryoshka will think the "pen" type is invalid.
 	that.fieldTypeObject = {
 		name: 'select-overview',
-		templateFileName: 'matryoshka__customField__selectOverview'
+		templateFileName: 'matryoshka__customField__selectOverview',
+		initMethod: function() {
+			Meteor.startup(function () {
+				Session.setDefault('listViewStyle', 'grid');
+				that.popup.deletePopup();
+			});
+		}
 	};
 
 	that.popup = {};
@@ -75,10 +81,6 @@ function MatryoshkaSelectOverviewHandler() {
 	};
 
 	that.init = function () {
-		Meteor.startup(function () {
-			Session.setDefault('listViewStyle', 'grid');
-			that.popup.deletePopup();
-		});
 		// Add this field type to Matryoshka
 		Matryoshka.userDefinedFields.add( that.fieldTypeObject );
 	};
