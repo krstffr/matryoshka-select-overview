@@ -50,7 +50,7 @@
 }
 /* line 55, ../sass/matroyshka-select-overview.scss */
 .matryoshka__body .matryoshka__customField__selectOverview__list {
-  overflow: auto;
+  overflow: scroll;
   height: 100%;
   padding-bottom: 3em;
 }
