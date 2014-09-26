@@ -1,8 +1,13 @@
 Package.describe({
-    summary: "\"Select-field-data-from-a-list-or-grid-overview\" support for Matryoshka."
+  summary: "\"Select-field-data-from-a-list-or-grid-overview\" support for Matryoshka.",
+  name: 'krstffr:matryoshka-select-overview',
+  version: "0.0.2",
+  git: "https://github.com/krstffr/meteor-matryoshka-select-overview.git"
 });
 
-Package.on_use(function (api) {
+Package.onUse(function (api) {
+
+  api.versionsFrom("METEOR@0.9.0");
 
   // Matryoshka Pen stuff
   // The HTML, JS and CSS.
@@ -17,6 +22,6 @@ Package.on_use(function (api) {
   api.add_files( filesToInclude, 'client');
 
   // We need to use Matryoshka and Template-stuff on the client
-  api.use(['matryoshka', 'templating'], 'client');
+  api.use(['krstffr:matryoshka', 'templating'], 'client');
 
 });
