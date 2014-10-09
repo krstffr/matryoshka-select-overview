@@ -9,7 +9,9 @@ function MatryoshkaSelectOverviewHandler() {
 		templateFileName: 'matryoshka__customField__selectOverview',
 		initMethod: function() {
 			Session.setDefault('listViewStyle', 'grid');
-			that.popup.deletePopup();
+			// Remove any current popups
+			if (that.popup.currentPopup)
+				that.popup.deletePopup();
 		}
 	};
 
@@ -48,7 +50,7 @@ function MatryoshkaSelectOverviewHandler() {
 		var dataToUse = that.popup.getData();
 		that.popup.currentPopup = Blaze.renderWithData( Template[that.popup.tmplName], dataToUse, document.body );
 		// The body should not be scrollable!
-		that.toggleBodyOverflow( true );
+		Matryoshka.DOMhelpers.body.toggleHiddenOverflow( true );
 	};
 
 	that.popup.deletePopup = function () {
@@ -56,26 +58,8 @@ function MatryoshkaSelectOverviewHandler() {
 			Blaze.remove(that.popup.currentPopup);
 		that.popup.currentPopup = false;
 		that.popup.input = false;
-		that.toggleBodyOverflow( false );
+		Matryoshka.DOMhelpers.body.toggleHiddenOverflow( false );
 		Matryoshka.filter.hide();
-	};
-
-	that.bodyOverflowFirstValue = false;
-
-	that.toggleBodyOverflow = function ( forceHidden ) {
-		var bd = $('body');
-		// First make sure we've stored the initial state of the body overflow value.
-		if (!that.bodyOverflowFirstValue)
-			that.bodyOverflowFirstValue = bd.css('overflow');
-		// If we're not force-hiding the overflow or it's currently hidden, reset it.
-		if (forceHidden) {
-			that.bodyOverflowFirstValue = bd.css('overflow');
-			bd.css({ overflow: 'hidden' });
-		}
-		// Else hide it and store it's current overflow value for use later.
-		else {
-			bd.css({ overflow: that.bodyOverflowFirstValue });
-		}
 	};
 
 	that.init = function () {
