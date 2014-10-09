@@ -22,6 +22,6 @@ Package.onUse(function (api) {
   api.add_files( filesToInclude, 'client');
 
   // We need to use Matryoshka and Template-stuff on the client
-  api.use(['krstffr:matryoshka@1.0.2', 'templating'], 'client');
+  api.use(['krstffr:matryoshka@1.0.10', 'templating'], 'client');
 
 });
