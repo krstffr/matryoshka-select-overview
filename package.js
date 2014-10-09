@@ -1,7 +1,7 @@
 Package.describe({
   summary: "\"Select-field-data-from-a-list-or-grid-overview\" support for Matryoshka.",
   name: 'krstffr:matryoshka-select-overview',
-  version: "0.0.2",
+  version: "0.0.3",
   git: "https://github.com/krstffr/meteor-matryoshka-select-overview.git"
 });
 
