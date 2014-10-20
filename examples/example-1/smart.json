@@ -1,0 +1,10 @@
+{
+	"packages": {
+		"krstffr:matryoshka-select-overview": {
+			"path": "../.."
+		},
+		"krstffr:matryoshka": {
+			"path": "../../../matryoshka"
+		}
+	}
+}

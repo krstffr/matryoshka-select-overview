@@ -23,6 +23,8 @@ Template[tmplName].helpers({
 		return this[ MatryoshkaSelectOverview.popup.options.fieldToUse ];
 	},
 	listItemValueToDisplay: function () {
+		if (!MatryoshkaSelectOverview.popup.options.fieldToDisplay)
+			return this[ MatryoshkaSelectOverview.popup.options.fieldToUse ];
 		return this[ MatryoshkaSelectOverview.popup.options.fieldToDisplay ];
 	},
 	listItemImagePreview: function () {

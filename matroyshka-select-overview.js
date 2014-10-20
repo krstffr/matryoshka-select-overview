@@ -71,6 +71,4 @@ function MatryoshkaSelectOverviewHandler() {
 
 }
 
-Meteor.startup(function () {
-	MatryoshkaSelectOverview = new MatryoshkaSelectOverviewHandler();
-});
+MatryoshkaSelectOverview = new MatryoshkaSelectOverviewHandler();

@@ -1,0 +1,21 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "krstffr:matryoshka-select-overview": {
+        "path": "../.."
+      },
+      "krstffr:matryoshka": {
+        "path": "../../../matryoshka"
+      }
+    },
+    "packages": {
+      "krstffr:matryoshka-select-overview": {
+        "path": "../.."
+      },
+      "krstffr:matryoshka": {
+        "path": "../../../matryoshka"
+      }
+    }
+  }
+}
